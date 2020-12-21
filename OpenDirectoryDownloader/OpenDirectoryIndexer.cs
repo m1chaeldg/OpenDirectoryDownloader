@@ -292,7 +292,7 @@ namespace OpenDirectoryDownloader
 
                             try
                             {
-                                string urlsFileName = $"{Library.CleanUriToFilename(Session.Root.Uri)}.txt";
+                                string urlsFileName = OpenDirectoryIndexerSettings.CommandLineOptions.OutputFile ?? $"{Library.CleanUriToFilename(Session.Root.Uri)}.txt";
                                 string urlsPath = Path.Combine(scansPath, urlsFileName);
                                 File.WriteAllLines(urlsPath, distinctUrls);
                                 Logger.Info($"Saved URL list to file: {urlsFileName}");
