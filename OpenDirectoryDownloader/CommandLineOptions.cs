@@ -43,7 +43,7 @@ namespace OpenDirectoryDownloader
         [Option("password", Required = false, Default = "", HelpText = "Password")]
         public string Password { get; set; }
 
-        [Option("of", "output-file", Required = false, Default = "", HelpText = "Save Output File")]
+        [Option("of", "output-file", Required = false, Default = null, HelpText = "Save Output File")]
         public string OutputFile { get; set; }
         
         // TODO: Future use
